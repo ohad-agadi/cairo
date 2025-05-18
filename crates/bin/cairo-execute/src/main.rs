@@ -206,6 +206,7 @@ fn main() -> anyhow::Result<()> {
         program_and_hints_from_executable(&executable, args.run.standalone)?;
 
     let user_args = user_args_from_flags(args.run.args.as_file.as_ref(), &args.run.args.as_list)?;
+    println!("user_args: {:?}", user_args);
 
     let mut hint_processor = CairoHintProcessor {
         runner: None,
